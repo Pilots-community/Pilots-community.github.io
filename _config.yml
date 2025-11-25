@@ -3,5 +3,5 @@ description: "Docs for all projects in the organization"
 theme: jekyll-theme-cayman   # or any supported theme
 
 # Org site: baseurl must be empty
-url: "https://my-org.github.io"
+url: "https://pilots-community.github.io/"
 baseurl: ""
