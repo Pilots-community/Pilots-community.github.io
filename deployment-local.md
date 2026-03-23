@@ -22,9 +22,9 @@ Single dev machine
 │   mgmt:19193 DSP:19194                 mgmt:29193 DSP:29194           │
 │ dataplane          38181              dataplane          48181        │
 │   public:38185                          public:48185                  │
-│ dashboard          3000               dashboard          3001        │
-│ vault              8200               vault              8201        │
-│ did-server         9876               did-server         9877        │
+│ dashboard          3000               dashboard          3001         │
+│ vault              8200               vault              8201         │
+│ did-server         9876               did-server         9877         │
 │                                                                       │
 │ postgres  15432 (shared — separate databases per participant)         │
 │ http-receiver  4000 (shared — push transfer test endpoint)            │

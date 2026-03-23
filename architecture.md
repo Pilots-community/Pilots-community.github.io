@@ -38,11 +38,11 @@ The Pilots Dataspace connector is built on [Eclipse Dataspace Components (EDC)](
 │  │  - Wallet: stores Verifiable Credentials                 │   │
 │  └──────────────────────────────────────────────────────────┘   │
 │                                                                 │
-│  ┌───────────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐   │
-│  │ DID Server    │  │  Vault   │  │ Postgres │  │Dashboard │   │
-│  │ nginx (9876)  │  │  (8200)  │  │ (15432)  │  │  (3000)  │   │
-│  │ Issuer DID    │  │ Secrets  │  │  State   │  │  Web UI  │   │
-│  └───────────────┘  └──────────┘  └──────────┘  └──────────┘   │
+│  ┌───────────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐    │
+│  │ DID Server    │  │  Vault   │  │ Postgres │  │Dashboard │    │
+│  │ nginx (9876)  │  │  (8200)  │  │ (15432)  │  │  (3000)  │    │
+│  │ Issuer DID    │  │ Secrets  │  │  State   │  │  Web UI  │    │
+│  └───────────────┘  └──────────┘  └──────────┘  └──────────┘    │
 └─────────────────────────────────────────────────────────────────┘
 ```
 

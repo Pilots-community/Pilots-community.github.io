@@ -93,7 +93,7 @@ POST /management/v3/contractnegotiations
   │  State: REQUESTING
   │
   │  DSP: POST /protocol/negotiations/request
-  │──────────────────────────────────────────────→│
+  │──────────────────────────────────────────────→ │
   │                                                │
   │                                          Validate offer
   │                                          (asset exists?
@@ -101,16 +101,16 @@ POST /management/v3/contractnegotiations
   │                                                │
   │                                          State: AGREEING
   │  DSP: agreement                                │
-  │←──────────────────────────────────────────────│
+  │←────────────────────────────────────────────── │
   │
   │  State: AGREED
   │
   │  DSP: verification
-  │──────────────────────────────────────────────→│
+  │──────────────────────────────────────────────→ │ 
   │                                                │
   │                                          State: FINALIZED
   │  DSP: finalized                                │
-  │←──────────────────────────────────────────────│
+  │←────────────────────────────────────────────── │
   │
   │  State: FINALIZED
   │  contractAgreementId = <AGREEMENT_ID>
@@ -156,7 +156,7 @@ POST /management/v3/
        │                         │           │
        │  GET <endpoint>         │           │
        │  Auth: Bearer <token>   │           │
-       │──────────────────────────────────→│
+       │──────────────────────────────────→  │
        │                         │           │
        │            actual data  │      Verify token,
        │←──────────────────────────────── fetch from source
@@ -239,11 +239,11 @@ Provider                                                Consumer
                           ← 6. Start transfer ───────────
 
  ┌─── PULL ─────────┐     ┌─── PUSH ──────────────┐
- │ Prepare DP,      │     │ DP fetches data,       │
- │ send EDR         │     │ POSTs to consumer      │
- │ Consumer fetches │     │ Transfer completes     │
- │ from DP public   │     │ automatically          │
- └──────────────────┘     └────────────────────────┘
+ │ Prepare DP,      │     │ DP fetches data,      │
+ │ send EDR         │     │ POSTs to consumer     │
+ │ Consumer fetches │     │ Transfer completes    │
+ │ from DP public   │     │ automatically         │
+ └──────────────────┘     └───────────────────────┘
 
                                7. Data received ✓
 ```

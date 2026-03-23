@@ -15,7 +15,7 @@ Each machine has two separate identities with different jobs:
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│  Machine (e.g. 192.168.1.50)                                   │
+│  Machine (e.g. 192.168.1.50)                                    │
 │                                                                 │
 │  ┌───────────────────────────┐  ┌────────────────────────────┐  │
 │  │  Participant DID          │  │  Issuer DID                │  │
@@ -176,25 +176,25 @@ The SI token uses a **token-in-token** pattern:
 
 ```
 ┌─ Outer JWT (SI Token) ──────────────────────────────────────┐
-│                                                              │
+│                                                             │
 │  Header:  { alg: "EdDSA", kid: "did:web:B:7093#key-1" }     │
-│                                                              │
-│  Payload: {                                                  │
-│    iss: "did:web:B:7093"          ← who is making request    │
-│    aud: "did:web:A:7093"          ← who the request is for   │
-│    exp: ...                                                  │
-│                                                              │
-│    token: ┌─ Inner JWT (Access Token) ────────────────────┐  │
-│           │  scope: "org.eclipse.edc.vc.type:             │  │
-│           │          MembershipCredential:read"            │  │
-│           │                                               │  │
-│           │  Tells the provider what credential            │  │
-│           │  to request from the consumer's wallet         │  │
-│           └───────────────────────────────────────────────┘  │
-│  }                                                           │
-│                                                              │
-│  Signed with: Machine B's Ed25519 private key                │
-└──────────────────────────────────────────────────────────────┘
+│                                                             │
+│  Payload: {                                                 │
+│    iss: "did:web:B:7093"          ← who is making request   │
+│    aud: "did:web:A:7093"          ← who the request is for  │
+│    exp: ...                                                 │
+│                                                             │
+│    token: ┌─ Inner JWT (Access Token) ────────────────────┐ │
+│           │  scope: "org.eclipse.edc.vc.type:             │ │
+│           │          MembershipCredential:read"           │ │
+│           │                                               │ │
+│           │  Tells the provider what credential           │ │
+│           │  to request from the consumer's wallet        │ │
+│           └───────────────────────────────────────────────┘ │
+│  }                                                          │
+│                                                             │
+│  Signed with: Machine B's Ed25519 private key               │
+└─────────────────────────────────────────────────────────────┘
 ```
 
 ## Trust Chain
